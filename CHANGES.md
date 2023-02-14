@@ -1,8 +1,13 @@
 # Changes
 
+## 1.8.1
+
+* [Fix a typo](https://github.com/rust-threadpool/rust-threadpool/pull/107)
+
 ## 1.8.0
 
 * [Raise minimal rustc version to 1.13.0](https://github.com/rust-threadpool/rust-threadpool/pull/99)
+* [Update num_cpus to 1.13.0](https://github.com/rust-threadpool/rust-threadpool/pull/105)
 
 ## 1.7.1
 

@@ -24,6 +24,13 @@ extern crate threadpool;
 
 This crate requires Rust >= 1.13.0
 
+## Memory performance
+
+Rust [1.32.0](https://blog.rust-lang.org/2019/01/17/Rust-1.32.0.html) has switched from jemalloc to the operating systems allocator.
+While this enables more plattforms for some workloads this means some performance loss.
+
+To regain the performance consider enabling the [jemallocator crate](https://crates.io/crates/jemallocator).
+
 ## Similar libraries
 
 * [rayon (`rayon::ThreadPool`)](https://docs.rs/rayon/*/rayon/struct.ThreadPool.html)
@@ -59,12 +66,13 @@ To run the tests with 1.13.0 use this command:
 cargo +1.13.0 test
 ```
 
-If you this fails with this error
+If your build fails with this error:
 ```
 warning: unused manifest key: package.categories
 error: failed to parse lock file at: /home/vp/rust/threadpool/Cargo.lock
 ```
-which you can fix by removing the lock file:
+
+You can fix it by removing the lock file:
 ```
 rm Cargo.lock
 ```
